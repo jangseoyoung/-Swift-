@@ -19,3 +19,21 @@
     - HTTP메시지에서 나타나는 첫 번째 한 줄 공백이 헤더와 바디를 구분짓는 경계선이라고 할 수 있음.
 - Body(바디)에는 실제로 보내고자 하는 메시지 본문 내용이 들어감.
   - 길이는 유동적임.
+
+### Request (요청 메시지)
+
+- 다음은 클라이언트에서 서버로 요청할 때 사용되는 HTTP메시지
+
+```http
+POST/userAccount/login HTTP/1.1
+Host : swiftapi.rubypaper.co.kr:2029
+Content-Type: application/x-www-form-urlencoded
+
+account=swift%40swift.com&passwd=1234&grant_type=password
+```
+
+- 이 값은 이 메시지가 어떤 전송 방식으로 구성되어 있는지를 나타낸다.
+- ***첫 줄 라인***
+  - 요청 내용에 대한 경로, 요청 형식에 대한 버전 정보가 나타나 있음.
+    - **어떤 버전의 HTTP 문법을 준수하고 있는가 하는 것**
+
