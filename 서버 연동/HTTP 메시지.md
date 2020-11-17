@@ -36,4 +36,5 @@ account=swift%40swift.com&passwd=1234&grant_type=password
 - ***첫 줄 라인***
   - 요청 내용에 대한 경로, 요청 형식에 대한 버전 정보가 나타나 있음.
     - **어떤 버전의 HTTP 문법을 준수하고 있는가 하는 것**
-
+- ***헤더***
+  - 샘플에서는 Host 헤더와 Content-Type 헤더가 정의되어 있음.
