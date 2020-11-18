@@ -38,3 +38,7 @@ account=swift%40swift.com&passwd=1234&grant_type=password
     - **어떤 버전의 HTTP 문법을 준수하고 있는가 하는 것**
 - ***헤더***
   - 샘플에서는 Host 헤더와 Content-Type 헤더가 정의되어 있음.
+    - Host 헤더에는 도메인 & 포트 번호가 포함되어 있음
+      - 두 개 이상의 도메인에 연결되어 있는 서버일 경우 어느 도메인으로 요청이 들어왔는지 구분하기 위함
+    - Content-Type은 본문이 어떤 형식으로 작성되어 있는지를 나타냄.
+      - 
