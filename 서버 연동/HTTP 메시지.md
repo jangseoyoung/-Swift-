@@ -41,4 +41,8 @@ account=swift%40swift.com&passwd=1234&grant_type=password
     - Host 헤더에는 도메인 & 포트 번호가 포함되어 있음
       - 두 개 이상의 도메인에 연결되어 있는 서버일 경우 어느 도메인으로 요청이 들어왔는지 구분하기 위함
     - Content-Type은 본문이 어떤 형식으로 작성되어 있는지를 나타냄.
-      - 
+      - 샘플의 application/x-www-form-urlencoded는 일반 POST 방식으로 데이터를 전송한다는 것을 의미함.
+        - ex) 회원가입, 로그인, 게시판 글쓰기 등 많은 UI들이 대부분 POST를 사용해 서버에 전송함.
+      - API 연동을 위해 사용할 메시지 본문 형식 : JSON
+        - 이 때는 Content-Type 헤더의 값을 application/json으로 설정해 주어야 함.
+          - 그렇지 않을 시 서버에서 본문 해석 불가능할 수 있음.
