@@ -58,3 +58,19 @@ account=swift%40swift.com&passwd=1234&grant_type=password
         ```
     
       - 특수문자의 경우 `URLEncoding`형식으로 변환함.
+      
+      - 지금까지의 예제 코드는 POST 방식일 경우
+      
+      - GET 방식으로 바꾸면 코드가 바뀜.
+      
+        ```http
+        GET /userAccount/login?account=swift@swift.com&amp;passwd=1234&amp;grant_type=password HTTP/1.1
+        
+        Host: swiftapi.rubypaper.co.kr:2029
+        Cache-Control: no-cache
+        ```
+      
+        - 메시지 본문이 사라지고 분문에 있어야 할 값이 첫 번째 라인의 경로 뒤에 '?'문자열과 함께 연결됨.
+        - GET 방식에서는 파라미터를 모두 URL 뒤에 연결해서 전달하기 때문임.
+          - 이렇게 연결된 파라미터를 **쿼리 스트링(Query String)**이라고 함.
+
